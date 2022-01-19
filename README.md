@@ -30,7 +30,7 @@ Additionally, we use the alignment and uniformity properties to measure the qual
 ```
 
 **Conclusion**  
-![](paper/model.jpg){:height="50%" width="50%"}
+![](paper/model.jpg =100x20)
 ![](paper/AandU.jpg){:height="50%" width="50%"}  
 
 i. Dev-F1 score, InfoXLM > XLM-R > M-bert.       
