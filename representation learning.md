@@ -2,8 +2,10 @@
 背景:    
     对于Bert Encoder编码后的Token-level emb，计算其mean_pooling作为句子向量的表达，往往存在"坍缩"现象。[1]    
 解释:     
-    本质是高频词语向量"主导"句子向量，可能导致语义无关的语句其句子向量也具有较高的相似度分数（Consine Score）。[1]    
+    本质是高频词语向量"主导"句子向量，可能导致语义无关的语句其句子向量也具有较高的相似度分数（Consine Score）。[1]  
+```  
 ![](./paper/bert_representation.png)
+```
 横轴: 人工标注标签0-5  纵轴:句子相似度。蓝色: bert-base  绿色:ConSert[1]    
     
 适用场景: 双塔的文本语义匹配    
@@ -14,8 +16,10 @@ a. 修改Model Encoder
     双塔模型的适用边界: 经典Sentence-Bert，为了计算效率，没有引入复杂的交互计算。token-level — mean pooling  — consine score    
     i. 后期交互使用CrossAttention Module    
         token-level embedding   — 通过CrossAttention互相重新表征 — mean pooling — consine score    
-        代码:   链接（使用self-attention代码，需将KV mask传递另一侧句子的padding mask）        
-    ![](./paper/cross_attention.png)     
+        代码:   链接（使用self-attention代码，需将KV mask传递另一侧句子的padding mask） 
+```       
+    ![](./paper/cross_attention.png)
+```     
     Q: 效果怎么样？    
         A1: 评估阶段和训练阶段网络结构相同，验证CrossAttention结构有效性。Spearman -0.02%(dev)    
         A2: 评估阶段仅使用Hidden-Status，不使用CrossAttention，验证Encoder本身的语义区分程度。Spearman +0.6%(dev)    
@@ -34,8 +38,10 @@ b. 添加额外的Los损失函数
             绿色: batch_size原始样本，紫色:对应产生的"正例"样本。对角线: label=1。 损失函数: CrossEntropy Softmax Loss。  
         ii. Encoder的模型结构。(图像，文本，文本、图像)  
         iii. 扩充负样本的数目，提高hard-negative出现的概率。（MoCo: Queue）  
-            核心思路抽象: 历史编码过的Embedding存放到固定大小的Queue。在当前batch计算时，Queue中的数据用于充当negative-samples。  
+            核心思路抽象: 历史编码过的Embedding存放到固定大小的Queue。在当前batch计算时，Queue中的数据用于充当negative-samples。
+```  
     ![](./paper/contrastive_loss.png)  
+```
     Q: 效果怎么样？  
         A: 添加simcse的Dropout方式作为对比学习Loss，Spearman+0.2%；  
         A: 接着使用Queue扩充负例样本，Spearman+0.3%；  
