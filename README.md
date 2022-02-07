@@ -11,9 +11,9 @@ Additionally, we use the alignment and uniformity properties to measure the qual
 +-------------------+---------------------------------------+---------------------+---------+
 |      SubTask      | file                                  | Module              | Ranking |
 +-------------------+---------------------------------------+---------------------+---------+
-|     zero-shot     | no_trainer_zero_shot.py               | EMA + Smart         | 6       |
+|     zero-shot     | no_trainer_zero_shot.py               | EMA + Smart         | 12      |
 +-------------------+---------------------------------------+---------------------+---------+
-|     one-shot      | no_trainer_one_shot.py                | EMA + FreeLB        | 1       |
+|     one-shot      | no_trainer_one_shot.py                | EMA + FreeLB        | 4       |
 +-------------------+---------------------------------------+---------------------+---------+
 | pretrain/finetune | CosineSimilarityCrossAttentionLoss.py | MSE Loss            |         |
 +-------------------+---------------------------------------+---------------------+---------+
@@ -23,9 +23,9 @@ Additionally, we use the alignment and uniformity properties to measure the qual
 +-------------------+---------------------------------------+---------------------+---------+
 | pretrain/finetune | MoCoBuilder.py                        | NetWork             |         |
 +-------------------+---------------------------------------+---------------------+---------+
-|     pretrain      | EmbeddingCrossSimEvaluator.py         | Eval                | 3       |
+|     pretrain      | EmbeddingCrossSimEvaluator.py         | Eval                | 4       |
 +-------------------+---------------------------------------+---------------------+---------+
-|     finetune      | EmbeddingCrossSimEvaluator.py         | Eval                | 2       |
+|     finetune      | EmbeddingCrossSimEvaluator.py         | Eval                | 4       |
 +-------------------+---------------------------------------+---------------------+---------+
 ```
 
