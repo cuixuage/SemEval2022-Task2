@@ -6,6 +6,9 @@ In the SubTaskA, we use InfoXLM as text encoder and exponential moving average (
 In the SubTaskB, we add an cross-attention module, contrastive objective and employ a momentum contrast.    
 Additionally, we use the alignment and uniformity properties to measure the quality of sentence embeddings.    
   
+![](./paper/poster.png)
+  
+
 **2.Code & Ranking**   
 ```
 +-------------------+---------------------------------------+---------------------+---------+
@@ -32,8 +35,7 @@ Additionally, we use the alignment and uniformity properties to measure the qual
 **3.Discussion**  
 <!-- ![](./paper/model.jpg)  
 ![](./paper/AandU.jpg)  -->
-![](./paper/poster.png)
-
+  
 i.  Dev-F1 score, InfoXLM > XLM-R > M-bert.       
 ii. Using the EMA-Method and Adversarial-Training can improve the model robustness.    
 iii.Contrastive learning can further improve the performance of sentence representations.   
