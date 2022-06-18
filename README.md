@@ -30,8 +30,9 @@ Additionally, we use the alignment and uniformity properties to measure the qual
 ```
 
 **3.Discussion**  
-![](./paper/model.jpg)  
-![](./paper/AandU.jpg) 
+<!-- ![](./paper/model.jpg)  
+![](./paper/AandU.jpg)  -->
+![](./paper/poster.png)
 
 i.  Dev-F1 score, InfoXLM > XLM-R > M-bert.       
 ii. Using the EMA-Method and Adversarial-Training can improve the model robustness.    
