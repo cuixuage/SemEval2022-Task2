@@ -1,4 +1,4 @@
-# SemEval2022-Task2
+# ZhichunRoad@SemEval2022-Task2   
 Adversarial Training and Contrastive Learning for Multiword Representations  
   
 **1.Abstract:**      
@@ -9,7 +9,8 @@ Additionally, we use the alignment and uniformity properties to measure the qual
 ![](./paper/poster.png)
   
 
-**2.Code & Ranking**   
+**2.Code & Ranking**     
+ZhichunRoad At SemEval2022-Task2    
 ```
 +-------------------+---------------------------------------+---------------------+---------+
 |      SubTask      | file                                  | Module              | Ranking |
