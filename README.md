@@ -1,5 +1,5 @@
 # ZhichunRoad@SemEval2022-Task2   
-[Adversarial Training and Contrastive Learning for Multiword Representations](https://aclanthology.org/2022.semeval-1.24/)
+[Adversarial Training and Contrastive Learning for Multiword Representations](https://aclanthology.org/2022.semeval-1.24/)    
 https://aclanthology.org/2022.semeval-1.24/  
   
 **1.Abstract:**      
